@@ -27,8 +27,9 @@ label start:
     # These display lines of dialogue.
 
     "Время тянулось. Я опаздывал на работу."
-    ~"<kznm!"~
-
+    thoughts "<kznm!"
+    "d,ewqrwe"
+    
     # This ends the game.
 
     return

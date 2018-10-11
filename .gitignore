@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#Ren`py precompiled files
+*.rpyc
+game/cache/
+
+#errors and logs
+*error.txt
+*log.txt

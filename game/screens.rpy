@@ -1344,7 +1344,7 @@ screen nvl_dialogue(dialogue):
 
 ## This controls the maximum number of NVL-mode entries that can be displayed at
 ## once.
-define config.nvl_list_length = gui.nvl_list_length
+define config.nvl_list_length = 50
 
 style nvl_window is default
 style nvl_entry is default
@@ -1365,6 +1365,8 @@ style nvl_window:
 style nvl_entry:
     xfill True
     ysize gui.nvl_height
+    left_margin 25
+    right_margin 50
 
 style nvl_label:
     xpos gui.nvl_name_xpos
@@ -1509,8 +1511,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 900
-
-
-
-
-
