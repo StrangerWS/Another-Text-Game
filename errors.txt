@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/vocabular.rpy", line 2: expected statement.
+    say(None, u"Древнейшие - живые божества Кельгарра. Они произошли из кристаллов внутри {a=call:vocab_blueMounts}(Синих Гор) и были уничтожены {a=call:vocab_karedis}Каредисом. Их рост достигал трёх метров в высоту, а кожа имела синий оттенок. После {a=call:vocab_karedis_genocide}(геноцида Каредиса) в живых осталось только пятеро Древнейших, а их поселения стали называться {a=call:voacb_wasteland}Пустошами.")
+                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+
+File "game/scripts/vocabular.rpy", line 5: expected statement.
+    say(None, u"Кели - обобщённое название всех рас, известных в Кельгарре. Кель - представитель расы, созданной {a=call:vocab_elders}Древнейшими")
+                                                                                                                                                   ^
+
+Ren'Py Version: Ren'Py 7.1.1.929
+Thu Oct 11 15:37:04 2018
