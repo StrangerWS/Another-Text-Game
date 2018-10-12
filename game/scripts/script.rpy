@@ -1,4 +1,5 @@
 ﻿label start:
+    call init_classes from _call_init_classes
 
     scene bg autumn leaves with Dissolve (3)
     nvl clear
@@ -6,6 +7,7 @@
     $ renpy.pause()
 
     window show dissolve
+    call access_inventory from _call_access_inventory
 
     "Эта история началась много лет назад."
     "Едва вернув престол и отбив атаку Хаметской Империи, правитель Кельгарра Колетт Ниакар, направил распоряжение в исторический корпус университета."
@@ -21,6 +23,7 @@
     bard "О, нет, милейший. Я еду к другу, на которого весь этот ад и свлалися."
     boy "Э... простите, господин. Сию секунду довезу."
 
+    call restrict_inventory from _call_restrict_inventory
     nvl clear
 
     kuat "Никто никуда не поедет! Успокойтесь вы!"
