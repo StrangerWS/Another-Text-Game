@@ -111,5 +111,6 @@ game/gui/
 game/images/
 
 #errors and logs
-*error.txt
+*errors.txt
 *log.txt
+*traceback.txt
