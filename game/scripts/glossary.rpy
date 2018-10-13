@@ -16,8 +16,11 @@ style text_glossary_item:
 
 screen glossary_tooltip(text):
     textbutton _(text):
-        xpos 360
-        ypos 80
+        xpos 500
+        ypos 140
+        xmaximum 800
+        ymaximum 800
+        text_color "#FFB060"
 
 screen glossary_screen():
     add "gui/game_menu.png"
@@ -28,17 +31,17 @@ screen glossary_screen():
             text_color "#FFB060"
 
     frame:
-        side("c r"):
-            area(20, 60, 300, 1000)
-            viewport id "glossary_list":
-                mousewheel True
-                for item in glossary:
+        area(60, 140, 400, 800)
+        viewport id "glossary_list":
+            mousewheel True
+            scrollbars "vertical"
+            ymaximum 800
+            xmaximum 400
+            vbox:
+                for item in glossary.values():
                     textbutton _(item.name):
                         action [Show ("glossary_tooltip", text = item.description)]
                         text_style "text_glossary_item"
-            vbar value YScrollValue("glossary_list")
-        null height 20
-
     textbutton _("Glossary"):
         xpos 100
         ypos 60
