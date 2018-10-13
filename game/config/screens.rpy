@@ -253,15 +253,14 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
-
+            textbutton _(u"Назад") action Rollback()
+            textbutton _(u"История") action ShowMenu('history')
+            textbutton _(u"Перемотка") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _(u"Авто") action Preference("auto-forward", "toggle")
+            textbutton _(u"Сохр") action ShowMenu('save')
+            textbutton _(u"Б.Сохр") action QuickSave()
+            textbutton _(u"Б.Загр") action QuickLoad()
+            textbutton _(u"Опции") action ShowMenu('preferences')
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -301,35 +300,35 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _(u"Начать") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _(u"История") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _(u"Сохранить") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _(u"Загрузить") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _(u"Опции") action ShowMenu("preferences")
 
         if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _(u"Остановить реплей") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _(u"Главное меню") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _(u"Об игре") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _(u"Помощь") action ShowMenu("help")
 
             ## The quit button is banned on iOS and unnecessary on Android.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _(u"Выход") action Quit(confirm=True)
 
 
 style navigation_button is gui_button

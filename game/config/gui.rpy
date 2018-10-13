@@ -237,6 +237,9 @@ define config.thumbnail_height = 216
 define gui.file_slot_cols = 3
 define gui.file_slot_rows = 2
 
+define gui.item_slot_cols = 6
+define gui.item_slot_rows = 5
+
 
 ## Positioning and Spacing #####################################################
 ##

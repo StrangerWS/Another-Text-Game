@@ -4,6 +4,15 @@ label new_chapter_init:
     stop ambience fadeout 3
     nvl clear
     return
+
+label access_inventory:
+    show screen inventory_button
+    return
+
+label restrict_inventory:
+    hide screen inventory_button
+    return
+
 init -5 python:
     def FindGlossaryItem(link):
         for item in glossary:
