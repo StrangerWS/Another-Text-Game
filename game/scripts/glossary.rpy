@@ -2,12 +2,12 @@ define config.hyperlink_handlers = {"glos": OpenGlossary}
 
 init -5 python:
     glossary = {}
-    glossary["blueMounts"] = GlossaryItem("Blue Mounts", "")
-    glossary["elders"] = GlossaryItem("Elders",  u"Древнейшие - живые божества Кельгарра. Они произошли из кристаллов внутри {a=glos:blueMounts}Синих Гор{/a} и были уничтожены {a=glos:karedis}Каредисом{/a}. Их рост достигал трёх метров в высоту, а кожа имела синий оттенок. После {a=glos:karedisGenocide}геноцида Каредиса{/a} в живых осталось только пятеро Древнейших, а их поселения стали называться {a=glos:wasteland}Пустошами.")
-    glossary["karedis"] = GlossaryItem("Karedis")
-    glossary["karedisGenocide"] = GlossaryItem("Karedis Genocide")
-    glossary["kel"] = GlossaryItem("Kel", u"Кели - обобщённое название всех рас, известных в Кельгарре. Кель - представитель расы, созданной {a=glos:elders)}Древнейшими{/a}")
-    glossary["wasteland"] = GlossaryItem("Wasteland")
+    glossary["blueMounts"] = GlossaryItem("Синие Горы", "Синие Горы")
+    glossary["elders"] = GlossaryItem("Древнейшие",  u"Древнейшие - живые божества Кельгарра. Они произошли из кристаллов внутри {a=glos:blueMounts}Синих Гор{/a} и были уничтожены {a=glos:karedis}Каредисом{/a}. Их рост достигал трёх метров в высоту, а кожа имела синий оттенок. После {a=glos:karedisGenocide}геноцида Каредиса{/a} в живых осталось только пятеро Древнейших, а их поселения стали называться {a=glos:wasteland}Пустошами.")
+    glossary["karedis"] = GlossaryItem("Каредис", "Каредис")
+    glossary["karedisGenocide"] = GlossaryItem("Геноцид Каредиса", "Геноцид Каредиса")
+    glossary["kel"] = GlossaryItem("Кель", u"Кели - обобщённое название всех рас, известных в Кельгарре. Кель - представитель расы, созданной {a=glos:elders}Древнейшими{/a}")
+    glossary["wasteland"] = GlossaryItem("Пустоши", "Пустоши")
 
 style text_glossary_item:
     size 32
@@ -23,11 +23,12 @@ screen glossary_tooltip(text):
         text_color "#FFB060"
 
 screen glossary_screen():
+    tag glossary_screen
     add "gui/game_menu.png"
     modal True
     hbox align (.95,.04) spacing 20:
         textbutton _("X"):
-            action [Hide("glossary_screen"), Hide("glossary_tooltip"), Show("inventory_button")]
+            action [Hide("glossary_screen"), Hide("glossary_tooltip")]
             text_color "#FFB060"
 
     frame:

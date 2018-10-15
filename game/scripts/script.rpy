@@ -23,7 +23,7 @@
     bard "О, нет, милейший. Я еду к другу, на которого весь этот ад и свлалися."
     boy "Э... простите, господин. Сию секунду довезу."
 
-    call restrict_inventory from _call_restrict_inventory
+    #call restrict_inventory from _call_restrict_inventory
     nvl clear
 
     kuat "Никто никуда не поедет! Успокойтесь вы!"

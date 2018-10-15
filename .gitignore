@@ -114,3 +114,5 @@ game/images/
 *errors.txt
 *log.txt
 *traceback.txt
+
+game/saves/
